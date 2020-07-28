@@ -117,12 +117,65 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"vendor/datatables/dataTables.bootstrap4.min.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
+})({"js/JsCheveres/traerInfoCursos.js":[function(require,module,exports) {
+var arregloColores = ["primary", "success", "info", "warning", "danger", "secondary", "light", "dark"]; // Crea el html para una card de un curso
 
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+function generateCourseCard(nombreCurso, gradoCurso, colorCurso) {
+  return "<div class=\"col-lg-3 mb-4\">\n            <div class=\"card bg-".concat(colorCurso, " text-white shadow\">\n               <div class=\"card-body\">\n                 ").concat(gradoCurso, "\n               <div class=\"text-white-50 small\">").concat(nombreCurso, "</div>\n               </div>\n           </div>\n         </div>");
+} // Cargue todo los contenidos e ubiquelos en las cartas de los cursos
+// RECORDAR EL ASYNC MANO
+
+
+function loadCourses() {
+  // const res = await fetch('http://localhost:4000/creators');
+  // const creators = await res.json();
+  var jsonPrueba = [{
+    id: 1,
+    nombre: "Matematicas",
+    grado: "6a",
+    color: arregloColores[0]
+  }, {
+    id: 2,
+    nombre: "Espa\xF1ol",
+    grado: "2c",
+    color: arregloColores[1]
+  }, {
+    id: 3,
+    nombre: "Sociales",
+    grado: "3a",
+    color: arregloColores[2]
+  }, {
+    id: 4,
+    nombre: "\xC9tica",
+    grado: "4d",
+    color: arregloColores[3]
+  }, {
+    id: 5,
+    nombre: "F\xEDsica",
+    grado: "5d",
+    color: arregloColores[4]
+  }, {
+    id: 6,
+    nombre: "Biolog\xEDa",
+    grado: "3a",
+    color: arregloColores[5]
+  }];
+  console.log(jsonPrueba); // Obtenga el primer elemento del documento con la clase="container":
+
+  var contenedorCursos = document.querySelector("[name=\"cursos\"]");
+  console.log(contenedorCursos); // Itere y cree las cartas y los contenedores
+
+  var rta = "";
+  console.log("antes".concat(rta));
+  jsonPrueba.forEach(function (curso) {
+    rta += generateCourseCard(curso.nombre, curso.grado, curso.color);
+  });
+  console.log("despues".concat(rta));
+  contenedorCursos.innerHTML = rta;
+}
+
+console.log(loadCourses());
+},{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -326,144 +379,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-loader.js":[function(require,module,exports) {
-var getBundleURL = require('./bundle-url').getBundleURL;
-
-function loadBundlesLazy(bundles) {
-  if (!Array.isArray(bundles)) {
-    bundles = [bundles];
-  }
-
-  var id = bundles[bundles.length - 1];
-
-  try {
-    return Promise.resolve(require(id));
-  } catch (err) {
-    if (err.code === 'MODULE_NOT_FOUND') {
-      return new LazyPromise(function (resolve, reject) {
-        loadBundles(bundles.slice(0, -1)).then(function () {
-          return require(id);
-        }).then(resolve, reject);
-      });
-    }
-
-    throw err;
-  }
-}
-
-function loadBundles(bundles) {
-  return Promise.all(bundles.map(loadBundle));
-}
-
-var bundleLoaders = {};
-
-function registerBundleLoader(type, loader) {
-  bundleLoaders[type] = loader;
-}
-
-module.exports = exports = loadBundlesLazy;
-exports.load = loadBundles;
-exports.register = registerBundleLoader;
-var bundles = {};
-
-function loadBundle(bundle) {
-  var id;
-
-  if (Array.isArray(bundle)) {
-    id = bundle[1];
-    bundle = bundle[0];
-  }
-
-  if (bundles[bundle]) {
-    return bundles[bundle];
-  }
-
-  var type = (bundle.substring(bundle.lastIndexOf('.') + 1, bundle.length) || bundle).toLowerCase();
-  var bundleLoader = bundleLoaders[type];
-
-  if (bundleLoader) {
-    return bundles[bundle] = bundleLoader(getBundleURL() + bundle).then(function (resolved) {
-      if (resolved) {
-        module.bundle.register(id, resolved);
-      }
-
-      return resolved;
-    }).catch(function (e) {
-      delete bundles[bundle];
-      throw e;
-    });
-  }
-}
-
-function LazyPromise(executor) {
-  this.executor = executor;
-  this.promise = null;
-}
-
-LazyPromise.prototype.then = function (onSuccess, onError) {
-  if (this.promise === null) this.promise = new Promise(this.executor);
-  return this.promise.then(onSuccess, onError);
-};
-
-LazyPromise.prototype.catch = function (onError) {
-  if (this.promise === null) this.promise = new Promise(this.executor);
-  return this.promise.catch(onError);
-};
-},{"./bundle-url":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js":[function(require,module,exports) {
-module.exports = function loadJSBundle(bundle) {
-  return new Promise(function (resolve, reject) {
-    var script = document.createElement('script');
-    script.async = true;
-    script.type = 'text/javascript';
-    script.charset = 'utf-8';
-    script.src = bundle;
-
-    script.onerror = function (e) {
-      script.onerror = script.onload = null;
-      reject(e);
-    };
-
-    script.onload = function () {
-      script.onerror = script.onload = null;
-      resolve();
-    };
-
-    document.getElementsByTagName('head')[0].appendChild(script);
-  });
-};
-},{}],0:[function(require,module,exports) {
-var b=require("../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("js",require("../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js"));b.load([]);
-},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js",0], null)
-//# sourceMappingURL=/dataTables.bootstrap4.min.e4caf71a.js.map
+},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/JsCheveres/traerInfoCursos.js"], null)
+//# sourceMappingURL=/traerInfoCursos.c45dd9f7.js.map
