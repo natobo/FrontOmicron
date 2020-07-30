@@ -15,7 +15,7 @@
   <link href="/all.min.88bba826.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <!-- Custom styles for this template-->
+  <!-- Custom styles for this template holi! :3-->
   <link href="/sb-admin-2.min.3715a144.css" rel="stylesheet">
 
 </head>
@@ -419,14 +419,19 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="/jquery.min.36823209.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="/bootstrap.bundle.min.f6b55e1c.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="/jquery.easing.min.06d5712c.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="/sb-admin-2.min.1abf5e88.js"></script>
+
+  <script>// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function () {
+  var fileName = $(this).val().split("\\").pop();
+  console.log(fileName);
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});</script>
 
 </body>
 
