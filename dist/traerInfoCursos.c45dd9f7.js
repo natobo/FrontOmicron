@@ -118,64 +118,30 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/JsCheveres/traerInfoCursos.js":[function(require,module,exports) {
+// Obtenga el primer elemento del documento con la clase="container":
+var contenedorCursos = document.querySelector("[name=\"cursos\"]"); // Arreglo de colores que tiene bootstrap;
+
 var arregloColores = ["primary", "success", "info", "warning", "danger", "secondary", "light", "dark"]; // Crea el html para una card de un curso
 
 function generateCourseCard(nombreCurso, gradoCurso, colorCurso) {
   return "<div class=\"col-lg-3 mb-4\">\n            <div class=\"card bg-".concat(colorCurso, " text-white shadow\">\n               <div class=\"card-body\">\n                 ").concat(gradoCurso, "\n               <div class=\"text-white-50 small\">").concat(nombreCurso, "</div>\n               </div>\n           </div>\n         </div>");
 } // Cargue todo los contenidos e ubiquelos en las cartas de los cursos
-// RECORDAR EL ASYNC MANO
 
 
 function loadCourses() {
-  // const res = await fetch('http://localhost:4000/creators');
-  // const creators = await res.json();
-  var jsonPrueba = [{
-    id: 1,
-    nombre: "Matematicas",
-    grado: "6a",
-    color: arregloColores[0]
-  }, {
-    id: 2,
-    nombre: "Espa\xF1ol",
-    grado: "2c",
-    color: arregloColores[1]
-  }, {
-    id: 3,
-    nombre: "Sociales",
-    grado: "3a",
-    color: arregloColores[2]
-  }, {
-    id: 4,
-    nombre: "\xC9tica",
-    grado: "4d",
-    color: arregloColores[3]
-  }, {
-    id: 5,
-    nombre: "F\xEDsica",
-    grado: "5d",
-    color: arregloColores[4]
-  }, {
-    id: 6,
-    nombre: "Biolog\xEDa",
-    grado: "3a",
-    color: arregloColores[5]
-  }];
-  console.log(jsonPrueba); // Obtenga el primer elemento del documento con la clase="container":
-
-  var contenedorCursos = document.querySelector("[name=\"cursos\"]");
-  console.log(contenedorCursos); // Itere y cree las cartas y los contenedores
-
-  var rta = "";
-  console.log("antes".concat(rta));
-  jsonPrueba.forEach(function (curso) {
-    rta += generateCourseCard(curso.nombre, curso.grado, curso.color);
+  fetch('http://127.0.0.1:8000/materias').then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    var rta = "";
+    data.forEach(function (curso) {
+      rta += generateCourseCard(curso.nombre, ' ', arregloColores[0]);
+    });
+    contenedorCursos.innerHTML = rta;
   });
-  console.log("despues".concat(rta));
-  contenedorCursos.innerHTML = rta;
 }
 
-console.log(loadCourses());
-},{}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+loadCourses();
+},{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -203,7 +169,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53341" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54584" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -379,5 +345,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/JsCheveres/traerInfoCursos.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/JsCheveres/traerInfoCursos.js"], null)
 //# sourceMappingURL=/traerInfoCursos.c45dd9f7.js.map
