@@ -372,10 +372,10 @@
                                 <div class="tab-pane active" id="estudiantes" role="tabpanel" aria-labelledby="estudiantes-tab">
                                     <ul class="list-group">
                                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            <a class="stretched-link" href="/cuaderno.html">Cras justo odio</a>
+                                            <a href="/cuaderno.html">Cras justo odio</a>
                                             <div class="row align-items-center">
-                                                <div class="col-1 mx-1">
-                                                    <i class="fas fa-pencil-alt"></i>
+                                                <div class="col-1 mx-1" data-toggle="modal" data-target="#myModal">
+                                                    <button type="button" class="btn btn-light"><i class="fas fa-pencil-alt"></i></button>
                                                 </div>
                                                 <div class="col">
                                                     <div class="input-group">
@@ -395,8 +395,8 @@
                                         <li class="list-group-item d-flex justify-content-between align-items-center">
                                             Dapibus ac facilisis in
                                             <div class="row align-items-center">
-                                                <div class="col-1 mx-1">
-                                                    <i class="fas fa-pencil-alt"></i>
+                                                <div class="col-1 mx-1" data-toggle="modal" data-target="#myModal">
+                                                    <button type="button" class="btn btn-light"><i class="fas fa-pencil-alt"></i></button>
                                                 </div>
                                                 <div class="col">
                                                     <div class="input-group">
@@ -416,8 +416,8 @@
                                         <li class="list-group-item d-flex justify-content-between align-items-center">
                                             Morbi leo risus
                                             <div class="row align-items-center">
-                                                <div class="col-1 mx-1">
-                                                    <i class="fas fa-pencil-alt"></i>
+                                                <div class="col-1 mx-1" data-toggle="modal" data-target="#myModal">
+                                                    <button type="button" class="btn btn-light"><i class="fas fa-pencil-alt"></i></button>
                                                 </div>
                                                 <div class="col">
                                                     <div class="input-group">
@@ -586,6 +586,37 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Editar Estudiante</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="usr">Nombre:</label>
+                    <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Numero de telefono:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}">
+                </div>
+                <button type="submit" class="btn btn-primary">Aceptar</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              </form>
+        </div>
+      </div>
+      
+    </div>
     </div>
 
     <!-- Bootstrap core JavaScript-->
