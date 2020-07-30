@@ -401,39 +401,66 @@
                                     <ul class="list-group">
                                         <li class="list-group-item d-flex justify-content-between align-items-center">
                                             <a class="stretched-link" href="cuaderno.html">Cras justo odio</a>
-                                            <span>
-                                                <i class="fas fa-pencil-alt mx-3"></i>
-                                                <a href="#" class="btn btn-primary btn-icon-split">
-                                                    <span class="icon text-white-50">
-                                                        <i class="fas fa-upload" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="text">Subir entrega</span>
-                                                </a>
-                                            </span>
+                                            <div class="row align-items-center">
+                                                <div class="col-1 mx-1">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-primary text-white-50" type="button" id="inputGroupFileAddon01">
+                                                                <i class="fas fa-upload" aria-hidden="true"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                                            <label class="custom-file-label" for="inputGroupFile01" data-browse="Buscar">Entrega</label>
+                                                        </div>     
+                                                    </div> 
+                                                </div>
+                                            </div>
                                         </li>
                                         <li class="list-group-item d-flex justify-content-between align-items-center">
                                             Dapibus ac facilisis in
-                                            <span>
-                                                <i class="fas fa-pencil-alt mx-3"></i>
-                                                <a href="#" class="btn btn-primary btn-icon-split">
-                                                    <span class="icon text-white-50">
-                                                        <i class="fas fa-upload" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="text">Subir entrega</span>
-                                                </a>
-                                            </span>
+                                            <div class="row align-items-center">
+                                                <div class="col-1 mx-1">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-primary text-white-50" type="button" id="inputGroupFileAddon02">
+                                                                <i class="fas fa-upload" aria-hidden="true"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="inputGroupFile02" aria-describedby="inputGroupFileAddon02">
+                                                            <label class="custom-file-label" for="inputGroupFile02" data-browse="Buscar">Entrega</label>
+                                                        </div>     
+                                                    </div> 
+                                                </div>
+                                            </div>
                                         </li>
                                         <li class="list-group-item d-flex justify-content-between align-items-center">
                                             Morbi leo risus
-                                            <span>
-                                                <i class="fas fa-pencil-alt mx-3"></i>
-                                                <a href="#" class="btn btn-primary btn-icon-split">
-                                                    <span class="icon text-white-50">
-                                                        <i class="fas fa-upload" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="text">Subir entrega</span>
-                                                </a>
-                                            </span>
+                                            <div class="row align-items-center">
+                                                <div class="col-1 mx-1">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-primary text-white-50" type="button" id="inputGroupFileAddon03">
+                                                                <i class="fas fa-upload" aria-hidden="true"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+                                                            <label class="custom-file-label" for="inputGroupFile03" data-browse="Buscar">Entrega</label>
+                                                        </div>     
+                                                    </div> 
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -617,6 +644,13 @@
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 
+    <script>
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+          var fileName = $(this).val().split("\\").pop();
+          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+        </script>
 </body>
 
 </html>
