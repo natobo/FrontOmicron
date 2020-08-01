@@ -2,7 +2,7 @@ const gradoCurso = document.querySelector(`.gradoCurso`);
 const nombreCurso = document.querySelector(`.nombreCurso`);
 const listaEstudiantes = document.querySelector(`.listaEstudiantes`);
 const listaActividades = document.querySelector(`#accordionExample`);
-console.log(listaActividades);
+
 function restoreIdFromLocalStorage() {
   // Traer la informacion de la lista del localstorage y ponerla de vuelta.
   const idLs = JSON.parse(localStorage.getItem(`idCursoSeleccionado`));
@@ -88,6 +88,7 @@ async function loadCourse() {
     .then(data => {
       gradoCurso.textContent = data.grado;
       nombreCurso.textContent = data.nombre;
+      console.log(data.cuadernos);
       data.cuadernos.forEach(element => {
         fetch(element.estudiante)
           .then(res => res.json())

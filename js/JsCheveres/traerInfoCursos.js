@@ -13,16 +13,17 @@ const arregloColores = [
 ];
 // Crea el html para una card de un curso
 function generateCourseCard(nombreCurso, gradoCurso, colorCurso, idCurso) {
-  return `<a href="http://localhost:3000/infoCurso.html">
-           <div class="col-lg-3 mb-4">
+  return `  <div class="col-lg-3 mb-4">
+             <a href="http://localhost:3000/infoCurso.html">
              <div class="card bg-${colorCurso} text-white shadow curso" value="${idCurso}">
                <div class="card-body" >
                  ${gradoCurso}
                <div class="text-white-50 small">${nombreCurso}</div>
                </div>
            </div>
+           </a>
           </div>
-         </a>`;
+         `;
 }
 // Cargue todo los contenidos e ubiquelos en las cartas de los cursos
 async function loadCourses() {
