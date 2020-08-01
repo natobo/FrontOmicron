@@ -77,6 +77,9 @@ function htmlActividad(idAct, nombre, descripcion, qr) {
       <img class="imgQr" src="data:image/png;base64,${
         qr.image_base64
       }" alt="" width="100px" height="100px">
+      <a href="data:image/png;base64, ${
+        qr.image_base64
+      }" download="filename.png">Descargar qr code</a>
     </div>
   </div>`;
   return div;
