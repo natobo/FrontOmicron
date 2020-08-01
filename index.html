@@ -4,292 +4,202 @@
 <head>
 
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>App omicron</title>
-  <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+  <title>Omicron</title>
 
-  <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap2.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.css" rel="stylesheet">
 
 </head>
 
-<body id="page-top">
+<body>
 
-  <!-- Page Wrapper -->
-  <div id="wrapper">
-
-    <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon">
-          <img class="img-fluid px-2 px-sm-2 mt-2 mb-2" src="img/logo-circular.png" alt="">
-        </div>
-        <div class="sidebar-brand-text mx-3">Omicron</div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="/img/logo.png" width="35" height="35" class="d-inline-block align-top" alt="" loading="lazy">
+        Omicron
       </a>
+      <a class="btn btn-primary" href="login.html">Iniciar Sesion</a>
+    </div>
+  </nav>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-book"></i>
-          <span>Cursos</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Generales
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-11 mx-auto">
+          <h1 class="mb-5">Administra fácilmente las entregas que tus estudiantes hicieron por Whatsapp</h1>
+        </div>
+        <div class="col-md-2 col-lg-3 col-xl-3 mx-auto">
+          <button  class="btn btn-block btn-lg btn-primary">Registrate</button>
+        </div>
       </div>
+    </div>
+  </header>
 
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Estudiantes <span class="font-italic">(No disponible)</span></span>
-        </a>
-      </li>
+  <!-- Pasos -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
 
-      <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-user"></i>
-          <span>Actividades <span class="font-italic">(No disponible)</span></span>
-        </a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
-
-      <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/archivar.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Registra tus cursos</h2>
+          <p class="lead mb-0">Mantén una lista ordenada de todas las materias que estas dictando con sus respectivos cursos y sus estudiantes</p>
+        </div>
       </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/tarea.jpg');"></div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>Crea tus actividades</h2>
+          <p class="lead mb-0">Crea códigos QR únicos para agregar a tus actividades, esto nos permitirá ordenar las tareas de tus estudiantes automáticamente</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/wa.jpeg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Reenvía sus tareas</h2>
+          <p class="lead mb-0">Reenvía a nuestro número de Whatsapp las tareas que tus estudiantes entregan o sube a nuestra pagina el zip con las imágenes</p>
+        </div>
+      </div>
+            <div class="row no-gutters">
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/cuaderno.png');"></div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>Visualiza los cuadernos</h2>
+          <p class="lead mb-0">Una vez procesadas las imágenes puedes visualizar y descargar un pdf con las imágenes de las tareas de cada estudiante.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    </ul>
-    <!-- End of Sidebar -->
+  <!-- Equipo -->
+  <section class="testimonials text-center bg-light">
+    <div class="container">
+      <h2 class="mb-5">El Equipo</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/cata.jpeg" alt="">
+            <h5>Catalina Alcalá</h5>
+            <p class="font-weight-light mb-0">Sexto semestre ingenieria de sistemas</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/german.jpeg" alt="">
+            <h5>Germán Martínez</h5>
+            <p class="font-weight-light mb-0">Sexto semestre ingenieria de sistemas</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/nicolas.jpeg" alt="">
+            <h5>Nicolás Tobo</h5>
+            <p class="font-weight-light mb-0">Sexto semestre ingenieria de sistemas</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/juan.jpeg" alt="">
+            <h5>Juan Avelino</h5>
+            <p class="font-weight-light mb-0">Sexto semestre ingenieria de sistemas</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/dan.jpeg" alt="">
+            <h5>Daniela Mariño</h5>
+            <p class="font-weight-light mb-0">Opcion en diseño</p>
+          </div>
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+  <!-- Call to Action -->
+  <section class="call-to-action text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-11 mx-auto">
+          <h1 class="mb-5">Listo para iniciar?</h1>
+        </div>
+        <div class="col-md-2 col-lg-3 col-xl-3 mx-auto">
+          <button  class="btn btn-block btn-lg btn-primary">Registrate</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <!-- Main Content -->
-      <div id="content">
-
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-          <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
-          </button>
-
-          <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-
-          <!-- Topbar Navbar -->
-          <ul class="navbar-nav ml-auto">
-
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                      aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
             </li>
-
-            <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
-              </a>
-              <!-- Dropdown - User Information -->
-              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Perfil
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Cerrar sesión
-                </a>
-              </div>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
             </li>
-
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
           </ul>
-
-        </nav>
-        <!-- End of Topbar -->
-
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Cursos</h1>
-            <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-success btn-icon-split"
-              data-toggle="modal" data-target="#myModal">
-              <span class="icon text-white-50">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </span>
-              <span class="text">Añadir curso</span>
-            </button>
-          </div>
-
-          <!-- Content Row -->
-          <div class="row">
-            <!-- Content Column -->
-            <div class="col-lg-12 mb-4">
-              <!-- Color System -->
-              <div class="row" name="cursos">
-
-              </div>
-            </div>
-          </div>
-          <!-- /.container-fluid -->
-
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2020. All Rights Reserved.</p>
         </div>
-        <!-- End of Main Content -->
-
-      </div>
-      <!-- End of Content Wrapper -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Omicron 2020</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">¿Estás Seguro de que quieres salir?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Selecciona "Cerrar sesión" si estás listo para salir.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="landing.html">Cerrar sesión</a>
-          </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
+  </footer>
 
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Añadir curso</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="usr">Nombre:</label>
-                <input type="text" class="form-control" id="usr">
-              </div>
-              <div class="form-group">
-                <label for="class">Grado:</label>
-                <input type="text" class="form-control" id="class">
-              </div>
-              <div class="form-group row">
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                  <label for="exampleFormControlSelect1">Color:</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option id="azul" class="btn-primary">Azul</option>
-                    <option id="gris" class="btn-secondary">Gris</option>
-                    <option id="verde" class="btn-success">Verde</option>
-                    <option id="rojo" class="btn-danger">Rojo</option>
-                    <option id="amarillo" class="btn-warning">Amarillo</option>
-                    <option id="azul-claro" class="btn-info">Azul claro</option>
-                    <option id="blanco" class="btn-light">Blanco</option>
-                    <option id="negro" class="btn-dark">Negro</option>
-                  </select>
-                </div>
-                <div class="col-sm-6">
-                  <label for="porcentaje">Bimestre</label>
-                  <input type="number" class="form-control" id="bimestre" min="1" max="4">
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary">Aceptar</button>
-              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <script src="js/JsCheveres/traerInfoCursos.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
