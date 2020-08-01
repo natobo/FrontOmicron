@@ -2,7 +2,7 @@
   "_args": [
     [
       "@fortawesome/fontawesome-free@5.13.1",
-      "C:\\Users\\nicot\\Documents\\HackatonOmicron\\Front\\aplicacionOmicron"
+      "C:\\Users\\Catalina\\OneDrive - Universidad de los andes\\Uni\\hackatones\\2020-inter\\FrontOmicron"
     ]
   ],
   "_from": "@fortawesome/fontawesome-free@5.13.1",
@@ -27,7 +27,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.13.1.tgz",
   "_spec": "5.13.1",
-  "_where": "C:\\Users\\nicot\\Documents\\HackatonOmicron\\Front\\aplicacionOmicron",
+  "_where": "C:\\Users\\Catalina\\OneDrive - Universidad de los andes\\Uni\\hackatones\\2020-inter\\FrontOmicron",
   "author": {
     "name": "Dave Gandy",
     "email": "dave@fontawesome.com",

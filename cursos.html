@@ -9,22 +9,19 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Blank</title>
-
+  <title>App omicron</title>
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
 
-  <!-- Custom styles for this template holi! :3-->
+  <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
-
-  <!-- Page Wrapper -->
 
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -61,15 +58,15 @@
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fas fa-user"></i>
+          <i class="fas fa-fw fa-cog"></i>
           <span>Estudiantes <span class="font-italic">(No disponible)</span></span>
-        </a>  
+        </a>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fas fa-list-ul"></i>
+          <i class="fas fa-user"></i>
           <span>Actividades <span class="font-italic">(No disponible)</span></span>
         </a>
       </li>
@@ -138,7 +135,6 @@
               </div>
             </li>
 
-
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
@@ -167,57 +163,36 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
+
           <!-- Page Heading -->
-          <div class="col">
-            <div class="row">
-                <h1 class="h3 mb-0 text-gray-800">Cras Justo Odio</h1>
-            </div>
-            <div class="row">
-                <p class="text-50 small">Matemáticas</p>
-            </div>
-        </div>
-        <div class="row justify-content-between align-items-end">
-          <div class="col-sm-4">
-                <div class="form-group">
-                    <label for="filtroActividadesEstudiante">Actividad</label>
-                    <select class="form-control" id="filtroActividadesEstudiante">
-                        <option>Seleccionar</option>
-                        <option>Actividad 1</option>
-                        <option>Actividad 2</option>
-                        <option>Actividad 3</option>
-                        <option>Actividad 4</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-primary text-white-50" type="button" id="inputGroupFileAddon04">
-                            <i class="fas fa-upload" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                        <label class="custom-file-label" for="inputGroupFile01" data-browse="Buscar">Entrega</label>
-                    </div>     
-                </div> 
-            </div>
-        </div>
-          <style>
-              .embed-container { position: relative; padding-bottom:50.25%; height:0; overflow: hidden; max-width: 100%; } 
-              .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
-          </style>
-          <div class='embed-container' data-page-width='452' data-page-height='640' id='ypembedcontainer' >
-            <iframe   src="https://www.yumpu.com/es/embed/view/zJ90MaAPD14GFled" frameborder="0" allowfullscreen="true"  allowtransparency="true">
-            </iframe>
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Cursos</h1>
+            <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-success btn-icon-split"
+              data-toggle="modal" data-target="#myModal">
+              <span class="icon text-white-50">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </span>
+              <span class="text">Añadir curso</span>
+            </button>
           </div>
-          <script src='https://players.yumpu.com/modules/embed/yp_r_iframe.js' ></script>
+
+          <!-- Content Row -->
+          <div class="row">
+            <!-- Content Column -->
+            <div class="col-lg-12 mb-4">
+              <!-- Color System -->
+              <div class="row" name="cursos">
+
+              </div>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
 
         </div>
-        <!-- /.container-fluid -->
+        <!-- End of Main Content -->
 
       </div>
-      <!-- End of Main Content -->
+      <!-- End of Content Wrapper -->
 
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
@@ -228,53 +203,93 @@
         </div>
       </footer>
       <!-- End of Footer -->
-
     </div>
-    <!-- End of Content Wrapper -->
+    <!-- End of Page Wrapper -->
 
-  </div>
-  <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">¿Estás Seguro de que quieres salir?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Selecciona "Cerrar sesión" si estás listo para salir.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="index.html">Cerrar sesión</a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">¿Estás Seguro de que quieres salir?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Selecciona "Cerrar sesión" si estás listo para salir.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            <a class="btn btn-primary" href="index.html">Cerrar sesión</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
 
-  <script>
-    // Add the following code if you want the name of the file appear on select
-    $(".custom-file-input").on("change", function() {
-      var fileName = $(this).val().split("\\").pop();
-      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-    });
-    </script>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Añadir curso</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="usr">Nombre:</label>
+                <input type="text" class="form-control" id="usr">
+              </div>
+              <div class="form-group">
+                <label for="class">Grado:</label>
+                <input type="text" class="form-control" id="class">
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <label for="exampleFormControlSelect1">Color:</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option id="azul" class="btn-primary">Azul</option>
+                    <option id="gris" class="btn-secondary">Gris</option>
+                    <option id="verde" class="btn-success">Verde</option>
+                    <option id="rojo" class="btn-danger">Rojo</option>
+                    <option id="amarillo" class="btn-warning">Amarillo</option>
+                    <option id="azul-claro" class="btn-info">Azul claro</option>
+                    <option id="blanco" class="btn-light">Blanco</option>
+                    <option id="negro" class="btn-dark">Negro</option>
+                  </select>
+                </div>
+                <div class="col-sm-6">
+                  <label for="porcentaje">Bimestre</label>
+                  <input type="number" class="form-control" id="bimestre" min="1" max="4">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Aceptar</button>
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script src="js/JsCheveres/traerInfoCursos.js"></script>
 
 </body>
 
